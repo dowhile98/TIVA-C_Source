@@ -21,3 +21,11 @@
  <h4>- IAR </h4>
  - https://www.iar.com/products/architectures/arm/iar-embedded-workbench-for-arm/#containerblock_1024
  
+ <h2>3.PAQUETES NECESARIOS</h2>
+  <h4>- TivaWare </h4>
+ - https://www.ti.com/tool/SW-TM4C
+   <h4>- CMSIS PACK </h4>
+ - https://www.keil.com/dd2/pack/#!#eula-container
+
+ <h2>AUTOR</h2>
+ <h4> Quino B. Jeffry</h4>
