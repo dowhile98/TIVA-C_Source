@@ -3,9 +3,9 @@
 
 <img src="https://user-images.githubusercontent.com/47931397/128592547-d0ed1240-b36a-4172-88e8-b57462ea27a9.png">
 
-<h2> 1. DOCUMENTOS NECESARIOS</h2>
+## 1. DOCUMENTOS NECESARIOS
 
-<h4>1. Hoja de datos</h4>
+#### 1. Hoja de datos
 hoja de datos ['datasheet'](https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf?ts=1628247353745&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTM4C123GH6PM4)
 
 - https://www.ti.com/lit/ds/symlink/tm4c123gh6pm.pdf?ts=1628247353745&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTM4C123GH6PM4
