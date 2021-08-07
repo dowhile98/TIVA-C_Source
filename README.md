@@ -17,7 +17,8 @@
  https://www.keil.com/demo/eval/arm.htm
  <h4>- ARM compiler 5 </h4>
  https://developer.arm.com/tools-and-software/embedded/arm-compiler/arm-compiler-5/downloads
- 
+  <h4>- UVISION: Stellaris ICDI Debug Adapter Support</h4>
+  https://developer.arm.com/documentation/ka002280/latest
  <h4>- IAR </h4>
  - https://www.iar.com/products/architectures/arm/iar-embedded-workbench-for-arm/#containerblock_1024
  
