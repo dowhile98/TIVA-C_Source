@@ -24,3 +24,6 @@
  <h4> Quino B. Jeffry</h4>
  <img src="https://user-images.githubusercontent.com/47931397/128605667-c6cb20c2-f14e-474d-a09c-0223ee430daa.png">
 
+## REFERENCIAS 
+<img src="https://user-images.githubusercontent.com/47931397/128617065-a6d2ca52-be5a-4e7d-b4f2-2f9051b68c0b.png">
+
