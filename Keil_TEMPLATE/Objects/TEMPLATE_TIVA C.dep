@@ -1,17 +1,18 @@
 Dependencies for Project 'TEMPLATE', Target 'TIVA C': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\main.c)(0x611B28B0)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections-I.\RTE\_TIVA_C-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="534" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x611B35AA)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I C:\ti\TivaWare_C_Series-2.2.0.295-I.\RTE\_TIVA_C-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="534" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8EF392)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\inc\tm4c123gh6pm.h)(0x5FFCDBBF)
 I (C:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F5566)
 I (C:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510449C)
 I (C:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h)(0x5E8F87F2)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8EF392)
 I (C:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h)(0x5E8F87F2)
 I (C:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E83BD92)
 I (C:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5E8F87F2)
 I (C:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8F87F2)
 I (C:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B74676)
 F (RTE\Device\TM4C123GH6PM\startup_TM4C123.s)(0x51B74676)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_TIVA_C-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123--pd "__UVISION_VERSION SETA 534" --pd "_RTE_ SETA 1" --pd "TM4C123GH6PM SETA 1" --pd "_RTE_ SETA 1"--list .\listings\startup_tm4c123.lst --xref -o .\objects\startup_tm4c123.o --depend .\objects\startup_tm4c123.d)
-F (RTE\Device\TM4C123GH6PM\system_TM4C123.c)(0x550AC84A)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections-I.\RTE\_TIVA_C-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="534" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o .\objects\system_tm4c123.o --omf_browse .\objects\system_tm4c123.crf --depend .\objects\system_tm4c123.d)
+F (RTE\Device\TM4C123GH6PM\system_TM4C123.c)(0x550AC84A)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I C:\ti\TivaWare_C_Series-2.2.0.295-I.\RTE\_TIVA_C-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123-D__UVISION_VERSION="534" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o .\objects\system_tm4c123.o --omf_browse .\objects\system_tm4c123.crf --depend .\objects\system_tm4c123.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8EF392)
 I (C:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F5566)
 I (C:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510449C)
