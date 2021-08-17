@@ -1,0 +1,1 @@
+"./Core/Scr/main.obj" "./Core/Scr/tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd" -llibc.a 
