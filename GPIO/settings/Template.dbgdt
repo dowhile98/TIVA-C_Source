@@ -240,7 +240,7 @@
             <IarPane-34091>
                 <expressions>
                     <item>sysFreq</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

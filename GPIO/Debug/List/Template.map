@@ -1,0 +1,183 @@
+###############################################################################
+#
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  21/Aug/2021  19:04:01
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =
+#        D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C -
+#        AGOSTO\TIVA-C_Source\GPIO\Debug\Exe\Template.out
+#    Map file     =
+#        D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C -
+#        AGOSTO\TIVA-C_Source\GPIO\Debug\List\Template.map
+#    Command line =
+#        -f "D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C -
+#        AGOSTO\TIVA-C_Source\GPIO\Debug\Exe\Template.out.rsp"
+#        ("D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C -
+#        AGOSTO\TIVA-C_Source\GPIO\Debug\Obj\Core\Scr\main.o"
+#        "D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C -
+#        AGOSTO\TIVA-C_Source\GPIO\Debug\Obj\Core\Scr\startup_ewarm.o"
+#        "D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C -
+#        AGOSTO\TIVA-C_Source\GPIO\Debug\Obj\Drivers\CMSIS\system_TM4C123.o"
+#        --no_out_extension -o "D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C -
+#        AGOSTO\TIVA-C_Source\GPIO\Debug\Exe\Template.out" --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        "D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C -
+#        AGOSTO\TIVA-C_Source\GPIO\Debug\List\Template.map" --config
+#        "D:\archivos de programa\IAR Systems\Embedded Workbench
+#        9.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+do not initialize { rw section .noinit };
+
+  Section  Kind         Address   Size  Object
+  -------  ----         -------   ----  ------
+"A0":                            0x26c
+  .intvec  const            0x0  0x26c  startup_ewarm.o [1]
+                        - 0x26c  0x26c
+
+"P1":                            0x1f8
+  .text    ro code        0x26c   0xa8  main.o [1]
+  .text    ro code        0x314   0xa4  system_TM4C123.o [2]
+  .text    ro code        0x3b8   0x22  startup_ewarm.o [1]
+  .text    ro code        0x3dc   0x1c  cstartup_M.o [5]
+  .text    ro code        0x3f8   0x22  fpinit_M.o [4]
+  .text    ro code        0x41c   0x1e  cmain.o [5]
+  .text    ro code        0x43a    0x4  low_level_init.o [3]
+  .text    ro code        0x43e    0x4  exit.o [3]
+  .text    ro code        0x444    0xa  cexit.o [5]
+  .text    ro code        0x450   0x14  exit.o [6]
+                        - 0x464  0x1f8
+
+"P2":                            0x200
+  .noinit  uninit   0x2000'0000  0x200  startup_ewarm.o [1]
+                  - 0x2000'0200  0x200
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x464     0x3'ffff  0x3'fb9c
+  0x2000'0200  0x2000'7fff    0x7e00
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C - AGOSTO\TIVA-C_Source\GPIO\Debug\Obj\Core\Scr: [1]
+    main.o                168
+    startup_ewarm.o        34      620      512
+    -------------------------------------------
+    Total:                202      620      512
+
+D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C - AGOSTO\TIVA-C_Source\GPIO\Debug\Obj\Drivers\CMSIS: [2]
+    system_TM4C123.o      164
+    -------------------------------------------
+    Total:                164
+
+dl7M_tln.a: [3]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+m7M_tls.a: [4]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [5]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           28
+    -------------------------------------------
+    Total:                 68
+
+shb_l.a: [6]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    8
+-----------------------------------------------
+    Grand Total:          504      620      512
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                     Address   Size  Type      Object
+-----                     -------   ----  ----      ------
+?main                       0x41d         Code  Gb  cmain.o [5]
+FaultISR                    0x3d7    0x2  Code  Lc  startup_ewarm.o [1]
+GPIOF_Config                0x29f   0x52  Code  Gb  main.o [1]
+IntDefaultHandler           0x3d9    0x2  Code  Lc  startup_ewarm.o [1]
+NmiSR                       0x3d5    0x2  Code  Lc  startup_ewarm.o [1]
+Region$$Table$$Base           0x0          --   Gb  - Linker created -
+Region$$Table$$Limit          0x0          --   Gb  - Linker created -
+ResetISR                    0x3b9   0x18  Code  Gb  startup_ewarm.o [1]
+SystemInit                  0x315   0x74  Code  Gb  system_TM4C123.o [2]
+__cmain                     0x41d         Code  Gb  cmain.o [5]
+__exit                      0x451   0x14  Code  Gb  exit.o [6]
+__iar_init_vfp              0x3f9         Code  Gb  fpinit_M.o [4]
+__iar_program_start         0x3dd         Code  Gb  cstartup_M.o [5]
+__low_level_init            0x43b    0x4  Code  Gb  low_level_init.o [3]
+__vector_table                0x0  0x26c  Data  Gb  startup_ewarm.o [1]
+_call_main                  0x429         Code  Gb  cmain.o [5]
+_exit                       0x445         Code  Gb  cexit.o [5]
+exit                        0x43f    0x4  Code  Gb  exit.o [3]
+main                        0x26d   0x32  Code  Gb  main.o [1]
+pui32Stack            0x2000'0000  0x200  Data  Lc  startup_ewarm.o [1]
+
+
+[1] = D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C - AGOSTO\TIVA-C_Source\GPIO\Debug\Obj\Core\Scr
+[2] = D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C - AGOSTO\TIVA-C_Source\GPIO\Debug\Obj\Drivers\CMSIS
+[3] = dl7M_tln.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  504 bytes of readonly  code memory
+  620 bytes of readonly  data memory
+  512 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

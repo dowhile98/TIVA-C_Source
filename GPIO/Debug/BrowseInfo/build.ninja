@@ -1,0 +1,61 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\main.c" -xcl_file "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\main.xcl" -macro_file "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\main.tmp" -icc_path "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\main.c" -D TM4C123GH6PM -o "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\Obj\Core\Scr" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Drivers\CMSIS\Include\\" -I "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\\Drivers\CMSIS\Device\TI\TM4C123\Inc\\" -Ol --predef_macros "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\main.tmp"
+  rspfile_name = D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\main.xcl.rsp
+
+build D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\startup_ewarm.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\startup_ewarm.c" -xcl_file "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\startup_ewarm.xcl" -macro_file "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\startup_ewarm.tmp" -icc_path "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\startup_ewarm.c" -D TM4C123GH6PM -o "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\Obj\Core\Scr" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Drivers\CMSIS\Include\\" -I "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\\Drivers\CMSIS\Device\TI\TM4C123\Inc\\" -Ol --predef_macros "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\startup_ewarm.tmp"
+  rspfile_name = D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\startup_ewarm.xcl.rsp
+
+build D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Drivers\CMSIS\Device\TI\TM4C123\Scr\system_TM4C123.c" -xcl_file "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.xcl" -macro_file "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.tmp" -icc_path "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Drivers\CMSIS\Device\TI\TM4C123\Scr\system_TM4C123.c" -D TM4C123GH6PM -o "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\Obj\Drivers\CMSIS" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Drivers\CMSIS\Include\\" -I "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\\Drivers\CMSIS\Device\TI\TM4C123\Inc\\" -Ol --predef_macros "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.tmp"
+  rspfile_name = D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.xcl.rsp
+
+build D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\main.pbi : INDEXER D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\main.xcl |  $
+D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\main.c
+  flags = "-out=D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\main.pbi" -f "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\main.xcl"
+
+build D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\startup_ewarm.pbi : INDEXER D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\startup_ewarm.xcl |  $
+D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\startup_ewarm.c
+  flags = "-out=D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\startup_ewarm.pbi" -f "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\startup_ewarm.xcl"
+
+build D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.pbi : INDEXER D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.xcl |  $
+D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Drivers\CMSIS\Device\TI\TM4C123\Scr\system_TM4C123.c
+  flags = "-out=D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.pbi" -f "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.xcl"
+
+build D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Template.pbw : MAKEBROWSE D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Template.pbd
+  flags = "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Template.pbd" -output "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Template.pbw"
+
+build D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Template.pbd : PDBLINK D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\main.pbi |  $
+D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\startup_ewarm.pbi $
+D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.pbi
+  flags = -M "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Template.pbd" "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\main.pbi" "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Core\Scr\startup_ewarm.pbi" "D$:\TRABAJO\UMAKER\CURSOS\ARM$ -$ TIVA$ C$ -$ AGOSTO\TIVA-C_Source\GPIO\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.pbi"
+
