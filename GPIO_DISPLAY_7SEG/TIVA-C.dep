@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>4278950286</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\Drivers\CMSIS\Device\TI\TM4C123\Scr\system_TM4C123.c</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\startup_ewarm.c</file>
+            <file>$PROJ_DIR$\Debug\Exe\TIVA-C.out</file>
+            <file>C:\ti\TivaWare_C_Series-2.2.0.295\inc\tm4c123gh6pm.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\Template.out</file>
+            <file>$PROJ_DIR$\Drivers\CMSIS\Device\TI\TM4C123\Inc\TM4C123.h</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\Drivers\CMSIS\system_TM4C123.o</file>
+            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\Drivers\CMSIS\Device\TI\TM4C123\Inc\system_TM4C123.h</file>
+            <file>$PROJ_DIR$\Drivers\CMSIS\Include\cmsis_compiler.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\Drivers\CMSIS\Include\core_cm4.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_types.h</file>
+            <file>$PROJ_DIR$\Drivers\CMSIS\Device\TI\TM4C123\Inc\TM4C123GH6PM.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\aarch32\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\Drivers\CMSIS\Include\cmsis_iccarm.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Drivers\CMSIS\Include\mpu_armv7.h</file>
+            <file>$PROJ_DIR$\Debug\List\TIVA-C.map</file>
+            <file>$PROJ_DIR$\Drivers\CMSIS\Include\cmsis_version.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Core\Scr\startup_ewarm.o</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\Core\Scr\main.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_nvic.h</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\Drivers\CMSIS\Device\TI\TM4C123\Scr\system_TM4C123.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 8</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 6 18 12 13 20 24 15 22 14 28 29 19 11 21 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 4 6 18 12 13 20 24 15 22 14 28 29 19 11 21 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup_ewarm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 25</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 31 17 6 18 12 13 20 24 15 22 14 28 29 19 11 21 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 3 23</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\TIVA-C.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 23</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 27 25 8 9 16 7 10 26</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\Template.out</name>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 27 25 8 9 16 7 10 26</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\Drivers\CMSIS\Device\TI\TM4C123\Scr\system_TM4C123.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\main.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\startup_ewarm.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>
