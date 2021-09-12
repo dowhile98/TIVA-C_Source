@@ -1,0 +1,15 @@
+"D:\archivos de programa\IAR Systems\Embedded Workbench 9.0\arm\bin\armPROC.dll" 
+
+"D:\archivos de programa\IAR Systems\Embedded Workbench 9.0\arm\bin\armLMIFTDI.dll" 
+
+"D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C - AGOSTO\TIVA-C_Source\UART\Debug\Exe\Template.out" 
+
+--plugin="D:\archivos de programa\IAR Systems\Embedded Workbench 9.0\arm\bin\armbat.dll" 
+
+--device_macro="D:\archivos de programa\IAR Systems\Embedded Workbench 9.0\arm\config\debugger\TexasInstruments\TM4C123.dmac" 
+
+--flash_loader="D:\archivos de programa\IAR Systems\Embedded Workbench 9.0\arm\config\flashloader\TexasInstruments\FlashTC4_H6_o.board" 
+
+
+
+
