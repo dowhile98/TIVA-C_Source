@@ -35,8 +35,14 @@ int main(void)
 
 /**
   * @brief configura el timer3 en modo periodico
+  * @note
+  * 1. cuando se trabaja en modo periodico en conteo descendente  el precaler funciona como verdadero prescalor,
+  *    lo que quiere decir que funciona como divisor de la frecuencia del reloj de entrada al timer. (System Clock / PSC)
+  * 2. cuando se trabaja en modo periodico, el prescaler funciona como una extension del timer y mantiene el MSB del contador
+  *    esto quiere decir que el timer se convierte en un timer de 24-bit donde los bits 23:16 serán cargados al registro TIMERnPR
   */
 void TIMER3_PeriodicMode(void){
+  uint32_t temp = 2500000 - 1;                  //periodo de conteo para el modo ascendente
   /*enable clock*/
   SYSCTL->RCGCTIMER |= SYSCTL_RCGCTIMER_R3;
   while(!(SYSCTL->PRTIMER & SYSCTL_PRTIMER_R3));
@@ -46,11 +52,13 @@ void TIMER3_PeriodicMode(void){
   TIMER3->CFG |= TIMER_CFG_16_BIT;              //16-BIT TIMER
   /*CONFIGURAR EL MODO*/
   TIMER3->TAMR |= TIMER_TAMR_TAMR_PERIOD;       //modo periodico
-  TIMER3->TAMR |= TIMER_TAMR_TACDIR;            //Conteo ascendente
+  //TIMER3->TAMR |= TIMER_TAMR_TACDIR;            //Conteo ascendente
   /*CONFIGURAR EL PRESCALER Y EL VALOR DE AUTORECARGA*/
   
+  //TIMER3->TAILR = temp & 0xFFFF;              //16-bit del contador
+  //TIMER3->TAPR = temp>>16 & 0xFF;             //bits 23:16 del contador
+  TIMER3->TAPR = 50 - 1;
   TIMER3->TAILR = 50000 - 1;
-  TIMER3->TAPR = SystemCoreClock/1000000 - 1;
   /*CONFIGURAMOS INTERRUPCION*/
   TIMER3->ICR |= TIMER_ICR_TATOCINT;
   TIMER3->IMR |= TIMER_IMR_TATOIM;              //enable interrupt

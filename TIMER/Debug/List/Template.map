@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.1.308/W64 for ARM                  12/Sep/2021  19:41:17
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  14/Sep/2021  11:16:59
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =
@@ -60,61 +60,37 @@ define block HEAP with size = 8K, alignment = 8 { };
 "P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
           rw, block CSTACK, block HEAP };
 do not initialize { rw section .noinit };
-initialize by copy { rw };
 
-  Section            Kind         Address   Size  Object
-  -------            ----         -------   ----  ------
-"A0":                                      0x26c
-  .intvec            const            0x0  0x26c  startup_ewarm.o [1]
-                                  - 0x26c  0x26c
+  Section  Kind         Address   Size  Object
+  -------  ----         -------   ----  ------
+"A0":                            0x26c
+  .intvec  const            0x0  0x26c  startup_ewarm.o [1]
+                        - 0x26c  0x26c
 
-"P1":                                      0x340
-  .text              ro code        0x26c  0x154  main.o [1]
-  .text              ro code        0x3c0   0xa4  system_TM4C123.o [2]
-  .text              ro code        0x464   0x30  TM4C123_it.o [1]
-  .text              ro code        0x494   0x2a  copy_init3.o [5]
-  .text              ro code        0x4c0   0x28  data_init.o [5]
-  .text              ro code        0x4e8   0x22  startup_ewarm.o [1]
-  .text              ro code        0x50c   0x1c  cstartup_M.o [5]
-  .text              ro code        0x528   0x22  fpinit_M.o [4]
-  .text              ro code        0x54c   0x1e  cmain.o [5]
-  .text              ro code        0x56a    0x4  low_level_init.o [3]
-  .text              ro code        0x56e    0x4  exit.o [3]
-  .text              ro code        0x574    0xa  cexit.o [5]
-  .text              ro code        0x580   0x14  exit.o [6]
-  .iar.init_table    const          0x594   0x14  - Linker created -
-  Initializer bytes  const          0x5a8    0x4  <for P2-1>
-  .rodata            const          0x5ac    0x0  copy_init3.o [5]
-                                  - 0x5ac  0x340
+"P1":                            0x2bc
+  .text    ro code        0x26c  0x13c  main.o [1]
+  .text    ro code        0x3a8   0xa4  system_TM4C123.o [2]
+  .text    ro code        0x44c   0x30  TM4C123_it.o [1]
+  .text    ro code        0x47c   0x22  startup_ewarm.o [1]
+  .text    ro code        0x4a0   0x1c  cstartup_M.o [5]
+  .text    ro code        0x4bc   0x22  fpinit_M.o [4]
+  .text    ro code        0x4e0   0x1e  cmain.o [5]
+  .text    ro code        0x4fe    0x4  low_level_init.o [3]
+  .text    ro code        0x502    0x4  exit.o [3]
+  .text    ro code        0x508    0xa  cexit.o [5]
+  .text    ro code        0x514   0x14  exit.o [6]
+                        - 0x528  0x2bc
 
-"P2", part 1 of 2:                           0x4
-  P2-1                        0x2000'0000    0x4  <Init block>
-    .data            inited   0x2000'0000    0x4  system_TM4C123.o [2]
-                            - 0x2000'0004    0x4
-
-"P2", part 2 of 2:                         0x200
-  .noinit            uninit   0x2000'0004  0x200  startup_ewarm.o [1]
-                            - 0x2000'0204  0x200
+"P2":                            0x200
+  .noinit  uninit   0x2000'0000  0x200  startup_ewarm.o [1]
+                  - 0x2000'0200  0x200
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-        0x5ac     0x3'ffff  0x3'fa54
-  0x2000'0204  0x2000'7fff    0x7dfc
-
-
-*******************************************************************************
-*** INIT TABLE
-***
-
-          Address      Size
-          -------      ----
-Copy (__iar_copy_init3)
-    1 source range, total size 0x4:
-                0x5a8   0x4
-    1 destination range, total size 0x4:
-          0x2000'0000   0x4
+        0x528     0x3'ffff  0x3'fad8
+  0x2000'0200  0x2000'7fff    0x7e00
 
 
 
@@ -130,15 +106,15 @@ command line/config:
 
 D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C - AGOSTO\TIVA-C_Source\TIMER\Debug\Obj\Core\Scr: [1]
     TM4C123_it.o           48
-    main.o                340
+    main.o                316
     startup_ewarm.o        34      620      512
     -------------------------------------------
-    Total:                422      620      512
+    Total:                398      620      512
 
 D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C - AGOSTO\TIVA-C_Source\TIMER\Debug\Obj\Drivers\CMSIS: [2]
-    system_TM4C123.o      164        4        4
+    system_TM4C123.o      164
     -------------------------------------------
-    Total:                164        4        4
+    Total:                164
 
 dl7M_tln.a: [3]
     exit.o                  4
@@ -154,58 +130,50 @@ m7M_tls.a: [4]
 rt7M_tl.a: [5]
     cexit.o                10
     cmain.o                30
-    copy_init3.o           42
     cstartup_M.o           28
-    data_init.o            40
     -------------------------------------------
-    Total:                150
+    Total:                 68
 
 shb_l.a: [6]
     exit.o                 20
     -------------------------------------------
     Total:                 20
 
-    Gaps                   10
-    Linker created                  20
+    Gaps                    8
 -----------------------------------------------
-    Grand Total:          808      644      516
+    Grand Total:          700      620      512
 
 
 *******************************************************************************
 *** ENTRY LIST
 ***
 
-Entry                       Address   Size  Type      Object
------                       -------   ----  ----      ------
-.iar.init_table$$Base         0x594          --   Gb  - Linker created -
-.iar.init_table$$Limit        0x5a8          --   Gb  - Linker created -
-?main                         0x54d         Code  Gb  cmain.o [5]
-FaultISR                      0x507    0x2  Code  Lc  startup_ewarm.o [1]
-GPIO_Config                   0x34b   0x2e  Code  Gb  main.o [1]
-IntDefaultHandler             0x509    0x2  Code  Lc  startup_ewarm.o [1]
-NmiSR                         0x505    0x2  Code  Lc  startup_ewarm.o [1]
-Region$$Table$$Base           0x594          --   Gb  - Linker created -
-Region$$Table$$Limit          0x5a8          --   Gb  - Linker created -
-ResetISR                      0x4e9   0x18  Code  Gb  startup_ewarm.o [1]
-SystemCoreClock         0x2000'0000    0x4  Data  Gb  system_TM4C123.o [2]
-SystemInit                    0x3c1   0x74  Code  Gb  system_TM4C123.o [2]
-TIMER3A_Handler               0x465   0x30  Code  Gb  TM4C123_it.o [1]
-TIMER3_PeriodicMode           0x2b9   0x92  Code  Gb  main.o [1]
-__NVIC_EnableIRQ              0x26d   0x1c  Code  Lc  main.o [1]
-__NVIC_SetPriority            0x289   0x24  Code  Lc  main.o [1]
-__cmain                       0x54d         Code  Gb  cmain.o [5]
-__exit                        0x581   0x14  Code  Gb  exit.o [6]
-__iar_copy_init3              0x495   0x2a  Code  Gb  copy_init3.o [5]
-__iar_data_init3              0x4c1   0x28  Code  Gb  data_init.o [5]
-__iar_init_vfp                0x529         Code  Gb  fpinit_M.o [4]
-__iar_program_start           0x50d         Code  Gb  cstartup_M.o [5]
-__low_level_init              0x56b    0x4  Code  Gb  low_level_init.o [3]
-__vector_table                  0x0  0x26c  Data  Gb  startup_ewarm.o [1]
-_call_main                    0x559         Code  Gb  cmain.o [5]
-_exit                         0x575         Code  Gb  cexit.o [5]
-exit                          0x56f    0x4  Code  Gb  exit.o [3]
-main                          0x2ad    0xc  Code  Gb  main.o [1]
-pui32Stack              0x2000'0004  0x200  Data  Lc  startup_ewarm.o [1]
+Entry                     Address   Size  Type      Object
+-----                     -------   ----  ----      ------
+?main                       0x4e1         Code  Gb  cmain.o [5]
+FaultISR                    0x49b    0x2  Code  Lc  startup_ewarm.o [1]
+GPIO_Config                 0x337   0x2e  Code  Gb  main.o [1]
+IntDefaultHandler           0x49d    0x2  Code  Lc  startup_ewarm.o [1]
+NmiSR                       0x499    0x2  Code  Lc  startup_ewarm.o [1]
+Region$$Table$$Base           0x0          --   Gb  - Linker created -
+Region$$Table$$Limit          0x0          --   Gb  - Linker created -
+ResetISR                    0x47d   0x18  Code  Gb  startup_ewarm.o [1]
+SystemInit                  0x3a9   0x74  Code  Gb  system_TM4C123.o [2]
+TIMER3A_Handler             0x44d   0x30  Code  Gb  TM4C123_it.o [1]
+TIMER3_PeriodicMode         0x2b9   0x7e  Code  Gb  main.o [1]
+__NVIC_EnableIRQ            0x26d   0x1c  Code  Lc  main.o [1]
+__NVIC_SetPriority          0x289   0x24  Code  Lc  main.o [1]
+__cmain                     0x4e1         Code  Gb  cmain.o [5]
+__exit                      0x515   0x14  Code  Gb  exit.o [6]
+__iar_init_vfp              0x4bd         Code  Gb  fpinit_M.o [4]
+__iar_program_start         0x4a1         Code  Gb  cstartup_M.o [5]
+__low_level_init            0x4ff    0x4  Code  Gb  low_level_init.o [3]
+__vector_table                0x0  0x26c  Data  Gb  startup_ewarm.o [1]
+_call_main                  0x4ed         Code  Gb  cmain.o [5]
+_exit                       0x509         Code  Gb  cexit.o [5]
+exit                        0x503    0x4  Code  Gb  exit.o [3]
+main                        0x2ad    0xc  Code  Gb  main.o [1]
+pui32Stack            0x2000'0000  0x200  Data  Lc  startup_ewarm.o [1]
 
 
 [1] = D:\TRABAJO\UMAKER\CURSOS\ARM - TIVA C - AGOSTO\TIVA-C_Source\TIMER\Debug\Obj\Core\Scr
@@ -215,9 +183,9 @@ pui32Stack              0x2000'0004  0x200  Data  Lc  startup_ewarm.o [1]
 [5] = rt7M_tl.a
 [6] = shb_l.a
 
-  808 bytes of readonly  code memory
-  644 bytes of readonly  data memory
-  516 bytes of readwrite data memory
+  700 bytes of readonly  code memory
+  620 bytes of readonly  data memory
+  512 bytes of readwrite data memory
 
 Errors: none
 Warnings: none
