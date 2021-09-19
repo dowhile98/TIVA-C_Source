@@ -50,7 +50,7 @@ static void IntDefaultHandler(void);
 //
 //*****************************************************************************
 extern void TIMER3A_Handler(void);
-
+extern void TIMER1A_Handler(void);
 //*****************************************************************************
 //
 // The entry point for the application startup code.
@@ -125,7 +125,7 @@ __root const uVectorEntry __vector_table[] @ ".intvec" =
     IntDefaultHandler,                      // Watchdog timer
     IntDefaultHandler,                      // Timer 0 subtimer A
     IntDefaultHandler,                      // Timer 0 subtimer B
-    IntDefaultHandler,                      // Timer 1 subtimer A
+    TIMER1A_Handler,                      // Timer 1 subtimer A
     IntDefaultHandler,                      // Timer 1 subtimer B
     IntDefaultHandler,                      // Timer 2 subtimer A
     IntDefaultHandler,                      // Timer 2 subtimer B

@@ -127305,20 +127305,6 @@
     "scope": null
   },
   {
-    "ID": "c:stdint.h@T@__data_intptr_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "int",
-    "location": {
-      "column": "1",
-      "line": "89",
-      "path": "D:\\archivos de programa\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdint.h"
-    },
-    "name": "__data_intptr_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:stdint.h@T@__data_uintptr_t",
     "What": "Typedef",
     "defdec": "Def",
@@ -127329,6 +127315,20 @@
       "path": "D:\\archivos de programa\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdint.h"
     },
     "name": "__data_uintptr_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdint.h@T@__data_intptr_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "int",
+    "location": {
+      "column": "1",
+      "line": "89",
+      "path": "D:\\archivos de programa\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdint.h"
+    },
+    "name": "__data_intptr_t",
     "origin": "system_include",
     "scope": null
   },
@@ -131031,6 +131031,132 @@
     "scope": null
   },
   {
+    "ID": "c:@pulses",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "pulses",
+    "location": {
+      "column": "10",
+      "line": "11",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
+    },
+    "name": "pulses",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIMER3_PeriodicMode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void TIMER3_PeriodicMode(void)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
+    },
+    "name": "TIMER3_PeriodicMode",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Config",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "22",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
+    },
+    "name": "GPIO_Config",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIMER1_EdgeCount_Config",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void TIMER1_EdgeCount_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "24",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
+    },
+    "name": "TIMER1_EdgeCount_Config",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int main(void)",
+    "location": {
+      "column": "5",
+      "line": "26",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIMER3_PeriodicMode",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIMER3_PeriodicMode(void)",
+    "location": {
+      "column": "6",
+      "line": "47",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
+    },
+    "name": "TIMER3_PeriodicMode",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1176@F@TIMER3_PeriodicMode@temp",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "temp",
+    "location": {
+      "column": "12",
+      "line": "48",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
+    },
+    "name": "temp",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Config",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void GPIO_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "79",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
+    },
+    "name": "GPIO_Config",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIMER1_EdgeCount_Config",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIMER1_EdgeCount_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "91",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
+    },
+    "name": "TIMER1_EdgeCount_Config",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:DLib_Product.h@75@macro@_DLIB_PRODUCTS_H_",
     "What": "MacroDef",
     "defdec": "Def",
@@ -132234,90 +132360,6 @@
     },
     "name": "rowWordSize",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TIMER3_PeriodicMode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void TIMER3_PeriodicMode(void)",
-    "location": {
-      "column": "6",
-      "line": "16",
-      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
-    },
-    "name": "TIMER3_PeriodicMode",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIO_Config",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void GPIO_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "21",
-      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
-    },
-    "name": "GPIO_Config",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@main",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "int main(void)",
-    "location": {
-      "column": "5",
-      "line": "24",
-      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
-    },
-    "name": "main",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TIMER3_PeriodicMode",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void TIMER3_PeriodicMode(void)",
-    "location": {
-      "column": "6",
-      "line": "44",
-      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
-    },
-    "name": "TIMER3_PeriodicMode",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@1091@F@TIMER3_PeriodicMode@temp",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "temp",
-    "location": {
-      "column": "12",
-      "line": "45",
-      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
-    },
-    "name": "temp",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIO_Config",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void GPIO_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "75",
-      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\main.c"
-    },
-    "name": "GPIO_Config",
-    "origin": "project_file",
     "scope": null
   },
   {
@@ -142611,6 +142653,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@TIMER1A_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void TIMER1A_Handler(void)",
+    "location": {
+      "column": "13",
+      "line": "53",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\startup_ewarm.c"
+    },
+    "name": "TIMER1A_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@__iar_program_start",
     "What": "Function",
     "defdec": "Dec",
@@ -142991,16 +143047,44 @@
     "scope": null
   },
   {
+    "ID": "c:@pulses",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "pulses",
+    "location": {
+      "column": "17",
+      "line": "7",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\TM4C123_it.c"
+    },
+    "name": "pulses",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@TIMER3A_Handler",
     "What": "Function",
     "defdec": "Def",
     "display": "void TIMER3A_Handler(void)",
     "location": {
       "column": "6",
-      "line": "6",
+      "line": "10",
       "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\TM4C123_it.c"
     },
     "name": "TIMER3A_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIMER1A_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIMER1A_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "24",
+      "path": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - TIVA C - AGOSTO\\TIVA-C_Source\\TIMER\\TM4C123_it.c"
+    },
+    "name": "TIMER1A_Handler",
     "origin": "project_file",
     "scope": null
   },
