@@ -1,0 +1,110 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\Delay.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Delay.c" -xcl_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\Delay.xcl" -macro_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\Delay.tmp" -icc_path "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Delay.c" -D TM4C123GH6PM -o "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\Obj\Core\Scr" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Drivers\CMSIS\Include\\" -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\\Drivers\CMSIS\Device\TI\TM4C123\Inc\\" -Ol --predef_macros "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\Delay.tmp"
+  rspfile_name = D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\Delay.xcl.rsp
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\main.c" -xcl_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\main.xcl" -macro_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\main.tmp" -icc_path "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\main.c" -D TM4C123GH6PM -o "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\Obj\Core\Scr" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Drivers\CMSIS\Include\\" -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\\Drivers\CMSIS\Device\TI\TM4C123\Inc\\" -Ol --predef_macros "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\main.tmp"
+  rspfile_name = D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\main.xcl.rsp
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\retarget.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\retarget.c" -xcl_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\retarget.xcl" -macro_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\retarget.tmp" -icc_path "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\retarget.c" -D TM4C123GH6PM -o "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\Obj\Core\Scr" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Drivers\CMSIS\Include\\" -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\\Drivers\CMSIS\Device\TI\TM4C123\Inc\\" -Ol --predef_macros "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\retarget.tmp"
+  rspfile_name = D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\retarget.xcl.rsp
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\startup_ewarm.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\startup_ewarm.c" -xcl_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\startup_ewarm.xcl" -macro_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\startup_ewarm.tmp" -icc_path "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\startup_ewarm.c" -D TM4C123GH6PM -o "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\Obj\Core\Scr" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Drivers\CMSIS\Include\\" -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\\Drivers\CMSIS\Device\TI\TM4C123\Inc\\" -Ol --predef_macros "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\startup_ewarm.tmp"
+  rspfile_name = D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\startup_ewarm.xcl.rsp
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\tm4c123_it.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\tm4c123_it.c" -xcl_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\tm4c123_it.xcl" -macro_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\tm4c123_it.tmp" -icc_path "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\tm4c123_it.c" -D TM4C123GH6PM -o "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\Obj\Core\Scr" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Drivers\CMSIS\Include\\" -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\\Drivers\CMSIS\Device\TI\TM4C123\Inc\\" -Ol --predef_macros "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\tm4c123_it.tmp"
+  rspfile_name = D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\tm4c123_it.xcl.rsp
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\UART.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\UART.c" -xcl_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\UART.xcl" -macro_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\UART.tmp" -icc_path "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\UART.c" -D TM4C123GH6PM -o "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\Obj\Core\Scr" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Drivers\CMSIS\Include\\" -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\\Drivers\CMSIS\Device\TI\TM4C123\Inc\\" -Ol --predef_macros "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\UART.tmp"
+  rspfile_name = D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\UART.xcl.rsp
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Drivers\CMSIS\Device\TI\TM4C123\Scr\system_TM4C123.c" -xcl_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.xcl" -macro_file "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.tmp" -icc_path "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Drivers\CMSIS\Device\TI\TM4C123\Scr\system_TM4C123.c" -D TM4C123GH6PM -o "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\Obj\Drivers\CMSIS" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "D$:\archivos$ de$ programa\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Drivers\CMSIS\Include\\" -I "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\\Drivers\CMSIS\Device\TI\TM4C123\Inc\\" -Ol --predef_macros "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.tmp"
+  rspfile_name = D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.xcl.rsp
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\Delay.pbi : INDEXER D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\Delay.xcl |  $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Delay.c
+  flags = "-out=D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\Delay.pbi" -f "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\Delay.xcl"
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\main.pbi : INDEXER D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\main.xcl |  $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\main.c
+  flags = "-out=D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\main.pbi" -f "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\main.xcl"
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\retarget.pbi : INDEXER D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\retarget.xcl |  $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\retarget.c
+  flags = "-out=D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\retarget.pbi" -f "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\retarget.xcl"
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\startup_ewarm.pbi : INDEXER D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\startup_ewarm.xcl |  $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\startup_ewarm.c
+  flags = "-out=D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\startup_ewarm.pbi" -f "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\startup_ewarm.xcl"
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\tm4c123_it.pbi : INDEXER D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\tm4c123_it.xcl |  $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\tm4c123_it.c
+  flags = "-out=D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\tm4c123_it.pbi" -f "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\tm4c123_it.xcl"
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\UART.pbi : INDEXER D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\UART.xcl |  $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\UART.c
+  flags = "-out=D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\UART.pbi" -f "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\UART.xcl"
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.pbi : INDEXER D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.xcl |  $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Drivers\CMSIS\Device\TI\TM4C123\Scr\system_TM4C123.c
+  flags = "-out=D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.pbi" -f "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.xcl"
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template.pbw : MAKEBROWSE D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template.pbd
+  flags = "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template.pbd" -output "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template.pbw"
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part0.pbi : PDBLINK D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\Delay.pbi |  $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\main.pbi $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\retarget.pbi
+  flags = -M "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part0.pbi" "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\Delay.pbi" "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\main.pbi" "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\retarget.pbi"
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part1.pbi : PDBLINK D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\startup_ewarm.pbi |  $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\tm4c123_it.pbi $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\UART.pbi
+  flags = -M "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part1.pbi" "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\startup_ewarm.pbi" "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\tm4c123_it.pbi" "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Core\Scr\UART.pbi"
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part2.pbi : PDBLINK D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.pbi
+  flags = -M "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part2.pbi" "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Drivers\CMSIS\system_TM4C123.pbi"
+
+build D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template.pbd : PDBLINK D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part0.pbi |  $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part1.pbi $
+D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part2.pbi
+  flags = -M "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template.pbd" "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part0.pbi" "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part1.pbi" "D$:\CURSOS\NEXTION\CODIGO\TIVA$ C\Button\Debug\BrowseInfo\Template_part2.pbi"
+
